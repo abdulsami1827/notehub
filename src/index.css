@@ -1,14 +1,23 @@
 @import "tailwindcss";
 
-html, body {
-  overflow: hidden;               /* disable scroll */
-  scrollbar-width: none !important; /* Firefox */
-  -ms-overflow-style: none;         /* IE 10+ */
+/* Only hide scrollbars on desktop, allow scrolling on mobile */
+@media (min-width: 768px) {
+  html, body {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none;         /* IE 10+ */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none !important;         /* Chrome, Edge, Safari */
+  }
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none !important;         /* Chrome, Edge, Safari */
+/* For mobile, ensure scrolling is enabled */
+@media (max-width: 767px) {
+  html, body {
+    overflow: auto !important;
+  }
 }
 
 select option {
