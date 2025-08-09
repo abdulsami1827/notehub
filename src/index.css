@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+html, body {
+  overflow: hidden;               /* disable scroll */
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none;         /* IE 10+ */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;         /* Chrome, Edge, Safari */
+}
+
+select option {
+  background-color: #1e293b; /* slate-800 */
+  color: white;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Alternative Tailwind approach using @layer */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* If you prefer to hide scrollbars globally for specific containers */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
