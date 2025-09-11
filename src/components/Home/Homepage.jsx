@@ -133,11 +133,11 @@ const Homepage = () => {
   ];
 
   const stats = [
-    { number: "50,000+", label: "Notes Shared", icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" /> },
-    { number: "15,000+", label: "Active Students", icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" /> },
-    { number: "200+", label: "Universities", icon: <Globe className="w-5 h-5 sm:w-6 sm:h-6" /> },
-    { number: "4.9/5", label: "Average Rating", icon: <Star className="w-5 h-5 sm:w-6 sm:h-6" /> }
-  ];
+  { number: "📚", label: "Learn & Share Notes", icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" /> },
+  { number: "🤝", label: "Connect with Students", icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" /> },
+  { number: "🌍", label: "Across Universities", icon: <Globe className="w-5 h-5 sm:w-6 sm:h-6" /> },
+  { number: "⭐", label: "Shaped by Students", icon: <Star className="w-5 h-5 sm:w-6 sm:h-6" /> }
+];
 
   const steps = [
     {
@@ -158,31 +158,32 @@ const Homepage = () => {
   ];
 
   const testimonials = [
-    {
-      name: "Sarah Chen",
-      university: "Stanford University",
-      major: "Computer Science",
-      rating: 5,
-      text: "NoteHub saved my semester! Found amazing CS notes that helped me ace my algorithms exam.",
-      avatar: "bg-gradient-to-r from-pink-400 to-rose-500"
-    },
-    {
-      name: "Marcus Johnson", 
-      university: "MIT",
-      major: "Physics",
-      rating: 5,
-      text: "The collaborative features are incredible. Study groups have never been this organized.",
-      avatar: "bg-gradient-to-r from-blue-400 to-cyan-500"
-    },
-    {
-      name: "Emily Rodriguez",
-      university: "Harvard",
-      major: "Pre-Med",
-      rating: 5,
-      text: "Quality of notes here is unmatched. Detailed, accurate, and beautifully formatted.",
-      avatar: "bg-gradient-to-r from-green-400 to-emerald-500"
-    }
-  ];
+  {
+    name: "Moin Khan",
+    university: "AIKTC, New Panvel",
+    major: "Computer Engineering",
+    rating: 5,
+    text: "This platform is exactly what we need. Sharing and finding notes will be so much easier now.",
+    avatar: "bg-gradient-to-r from-pink-400 to-rose-500"
+  },
+  {
+    name: "Eram Khot",
+    university: "AIKTC, New Panvel",
+    major: "Computer Engineering",
+    rating: 4,
+    text: "I really like the simple interface. Looking forward to uploading my notes here.",
+    avatar: "bg-gradient-to-r from-blue-400 to-cyan-500"
+  },
+  {
+    name: "Shifa Begum",
+    university: "AIKTC, New Panvel",
+    major: "Computer Engineering",
+    rating: 5,
+    text: "Finally, a proper place for our class notes instead of relying on random groups. Excited for the launch!",
+    avatar: "bg-gradient-to-r from-green-400 to-emerald-500"
+  }
+];
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 relative overflow-hidden">
@@ -220,11 +221,11 @@ const Homepage = () => {
       {/* Hero Section */}
       <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
-          <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-xs sm:text-sm text-white/80 mb-6 sm:mb-8">
+{/*           <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-xs sm:text-sm text-white/80 mb-6 sm:mb-8">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
             <span className="hidden sm:inline">Join 15,000+ students already using NoteHub</span>
             <span className="sm:hidden">15,000+ students using NoteHub</span>
-          </div>
+          </div> */}
           
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
             <span className="bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
@@ -251,9 +252,9 @@ const Homepage = () => {
             </button>
           </div>
           
-          <div className="mt-12 sm:mt-16 text-white/40 text-xs sm:text-sm">
+{/*           <div className="mt-12 sm:mt-16 text-white/40 text-xs sm:text-sm">
             Trusted by students from 200+ universities worldwide
-          </div>
+          </div> */}
         </div>
       </section>
 
