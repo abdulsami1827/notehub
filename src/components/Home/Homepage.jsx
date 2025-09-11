@@ -266,9 +266,9 @@ const Homepage = () => {
               key={i}
               className="group bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10 text-center hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:scale-105"
             >
-              <div className="flex justify-center mb-3 sm:mb-4 text-violet-400 group-hover:text-violet-300 transition-colors">
+{/*               <div className="flex justify-center mb-3 sm:mb-4 text-violet-400 group-hover:text-violet-300 transition-colors">
                 {stat.icon}
-              </div>
+              </div> */}
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
               <div className="text-white/70 group-hover:text-white/90 transition-colors text-xs sm:text-sm lg:text-base">{stat.label}</div>
             </div>
