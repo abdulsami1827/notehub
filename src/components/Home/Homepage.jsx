@@ -219,7 +219,7 @@ const Homepage = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 text-center relative z-10">
+      <section className="pt-24 sm:pt-32 pb-8 sm:pb-10 px-4 sm:px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
 {/*           <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-xs sm:text-sm text-white/80 mb-6 sm:mb-8">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
