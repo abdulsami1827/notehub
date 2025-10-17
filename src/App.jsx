@@ -18,6 +18,8 @@ import UploadAccessRoute from './components/Common/UploadAccessRoute';
 import MyNotesViewer from './components/Dashboard/MyNotesViewer';
 import Settings from './components/Dashboard/Settings';
 import AIChatNotes from './components/Dashboard/AIChatNotes';
+import Notices from './components/Dashboard/Notices';
+import Submissions from './components/Dashboard/Submissions';
 
 function App() {
   const { user, loading } = useAuth();
@@ -76,6 +78,8 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="notes" element={<NotesViewer />} />
             <Route path="my-notes" element={<MyNotesViewer />} />
+            <Route path="notices" element={<Notices />} />
+            <Route path="submissions" element={<Submissions />} />
 
             <Route path="upload" element={
               <UploadAccessRoute>

@@ -9,6 +9,7 @@ import {
   Bell,
   User,
   LogOut,
+  FileText,
   Menu,
   X,
   NotebookText,
@@ -54,6 +55,8 @@ const DashboardLayout = () => {
   const sidebarItems = [
     { name: 'Dashboard', icon: <BookOpen className="w-5 h-5" />, view: 'dashboard' },
     { name: 'Browse Notes', icon: <Search className="w-5 h-5" />, view: 'notes' },
+    { name: 'Notices', icon: <Bell className="w-5 h-5" />, view: 'notices' },
+    { name: 'Submissions', icon: <FileText className="w-5 h-5" />, view: 'submissions' },
     { name: 'My Notes', icon: <NotebookText className="w-5 h-5" />, view: 'my-notes' },
     ...(canUpload
       ? [

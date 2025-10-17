@@ -278,3 +278,41 @@ export const getUserStats = async (userId) => {
     };
   }
 };
+
+// ---------------- NOTICES ----------------
+export async function addNotice(notice) {
+  const colRef = collection(db, "notices");
+  const docRef = await addDoc(colRef, notice);
+  return { id: docRef.id, ...notice };
+}
+
+export async function getNotices(filters = {}) {
+  const cond = [];
+  if (filters.branch && filters.branch !== "all") cond.push(where("branch", "in", [filters.branch, "all"]));
+  if (filters.academicYear && filters.academicYear !== "all") cond.push(where("academicYear", "in", [filters.academicYear, "all"]));
+  if (filters.semester && filters.semester !== "all") cond.push(where("semester", "in", [filters.semester, "all"]));
+  let q;
+  if (cond.length > 0) q = query(collection(db, "notices"), ...cond, orderBy("postedAt", "desc"));
+  else q = query(collection(db, "notices"), orderBy("postedAt", "desc"));
+  const snap = await getDocs(q);
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+}
+
+// ---------------- SUBMISSIONS ----------------
+export async function addSubmission(submission) {
+  const colRef = collection(db, "submissions");
+  const docRef = await addDoc(colRef, submission);
+  return { id: docRef.id, ...submission };
+}
+
+export async function getSubmissions(filters = {}) {
+  const cond = [];
+  if (filters.branch && filters.branch !== "all") cond.push(where("branch", "in", [filters.branch, "all"]));
+  if (filters.academicYear && filters.academicYear !== "all") cond.push(where("academicYear", "in", [filters.academicYear, "all"]));
+  if (filters.semester && filters.semester !== "all") cond.push(where("semester", "in", [filters.semester, "all"]));
+  let q;
+  if (cond.length > 0) q = query(collection(db, "submissions"), ...cond, orderBy("createdAt", "desc"));
+  else q = query(collection(db, "submissions"), orderBy("createdAt", "desc"));
+  const snap = await getDocs(q);
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+}
