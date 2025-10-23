@@ -96,7 +96,7 @@ const fileToBase64 = (file) => {
 
 // Enhanced chat function
 const chatWithFile = async (file, question, chatHistory) => {
-  const MODEL = "gemini-1.5-flash";
+  const MODEL = "gemini-2.5-flash";
   
   const conversationContext = chatHistory.slice(-6).map(msg => 
     `${msg.sender === 'user' ? 'Human' : 'AI'}: ${msg.text}`
